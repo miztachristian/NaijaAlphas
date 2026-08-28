@@ -457,7 +457,7 @@ print(f"\n{'='*75}")
 print(f"\n💡 Next: Run this again after the next snapshot for fresh rankings!")
 
 
-# ## 💰 ₦1.5M Investment Plan — Feb 20 (₦1M) + Feb 23 (₦500k)
+# ## 💰 Deployment Plan (sample capital)
 # **Goal:** Maximize growth through Feb–March by adding to winners, entering new positions, and trimming laggards.
 # 
 
@@ -465,7 +465,7 @@ print(f"\n💡 Next: Run this again after the next snapshot for fresh rankings!"
 
 
 # ══════════════════════════════════════════════════════════════════════════
-# 💰 ₦1.5M INVESTMENT ANALYSIS — Feb 20 (₦1M) + Feb 23 (₦500k)
+# 💰 DEPLOYMENT ANALYSIS (sample capital)
 # ══════════════════════════════════════════════════════════════════════════
 
 import warnings
@@ -890,7 +890,7 @@ for pick in super_6_picks:
 # ─── Summary ───
 remaining_tomorrow = BUDGET_TOMORROW - 1_000_000 # Just base logic
 # Actual logic:
-# Total Cash available for this plan was ₦1.5M (1M tom + 500k Mon)
+# Total cash available for this plan (sample)
 # We are spending ₦1.25M tomorrow.
 
 remaining_cash = (BUDGET_TOMORROW + BUDGET_MONDAY) - total_deployed
@@ -1085,12 +1085,10 @@ print(f"📋 REVISED EXECUTION PLAN — Based on Real Order Book Data")
 print(f"{'='*120}\n")
 
 revised_plan = [
-    # ABBEYBDS removed — reallocated ₦250k to NAHCO (+₦100k) and NPFMCRFBK (+₦100k) and cash reserve (+₦50k)
-    {'symbol': 'NAHCO',       'alloc': 300_000, 'entry': 171.85, 'order': 'LIMIT ₦171.85', 'why': 'Best order book. Tight spread. Increased from ₦200k → ₦300k.'},
-    {'symbol': 'VITAFOAM',    'alloc': 250_000, 'entry': 124.90, 'order': 'LIMIT ₦124.90', 'why': 'Buy the dip — 60k units available at this price.'},
-    {'symbol': 'NPFMCRFBK',   'alloc': 250_000, 'entry': 5.71,  'order': 'LIMIT ₦5.71',   'why': 'Increased from ₦150k → ₦250k. Tight spread, strong volume.'},
-    {'symbol': 'IKEJAHOTEL',  'alloc': 200_000, 'entry': 41.00, 'order': 'LIMIT ₦41.00',  'why': 'Offers start at ₦38.50! Try ₦41 limit — 58k units there.'},
-    {'symbol': 'TIP',         'alloc': 200_000, 'entry': 20.00, 'order': 'LIMIT ₦20.00',  'why': 'Gap up to ₦20. Only 1,065 @ ₦20, rest @ ₦20.45. Still worth it.'},
+    # Illustrative allocation plan (sample values).
+    {'symbol': 'GTCO',       'alloc': 300_000, 'entry': 50.00,  'order': 'LIMIT N50.00',  'why': 'Sample entry - tight spread'},
+    {'symbol': 'DANGCEM',    'alloc': 250_000, 'entry': 450.00, 'order': 'LIMIT N450.00', 'why': 'Sample entry'},
+    {'symbol': 'ZENITHBANK', 'alloc': 200_000, 'entry': 40.00,  'order': 'LIMIT N40.00',  'why': 'Sample entry'},
 ]
 
 total_revised = 0

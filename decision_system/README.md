@@ -10,7 +10,7 @@ scoring math.
 ## Daily use
 
 ```bash
-python daily_ingest.py --capital 1500000
+python daily_ingest.py --capital 1000000
 ```
 
 Runs, each step failure-isolated: macro ingest → news → disclosures → snapshot

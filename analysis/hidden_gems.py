@@ -11,7 +11,7 @@ v2.0 — Hardened against value traps (ROYALEX/ABBEYBDS lessons, Apr 2026):
 - Tighter EPS/margin caps prevent one-time gains from inflating scores
 - FCF confirmation bonus/penalty ensures earnings are backed by cash
 
-v2.1 — Hardened against the four-stock postmortem (Apr 2026, -₦210K):
+v2.1 — Hardened against a documented multi-stock postmortem:
 - max_pe filter: blocks paying >20x earnings for "hidden gems"
 - min_liquidity_naira filter: requires ₦10M+/day turnover
 - min_3m_perf filter: a stock down 30%+ in 3M is a falling knife, not a gem

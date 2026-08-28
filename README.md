@@ -82,7 +82,7 @@ flowchart LR
 ```
 
 ```bash
-python daily_ingest.py --capital 1500000
+python daily_ingest.py --capital 1000000
 ```
 
 **Ships four artifacts to `outputs/decisions/<date>/`:**
