@@ -1,0 +1,55 @@
+# Snapshot Ranker Configuration
+# ==============================
+# Configuration for NGX stock ranking based on TradingView snapshots.
+
+# Feature weights for aggressive growth ranking
+# Emphasizes momentum and growth, lighter on quality/risk
+aggressive:
+  momentum_weight: 0.35
+  fundamental_growth_weight: 0.30
+  quality_weight: 0.15
+  risk_penalty_weight: 0.10
+  coverage_penalty_weight: 0.10
+
+# Feature weights for growth with guardrails
+# More balanced, heavier on quality and risk management
+guardrails:
+  momentum_weight: 0.25
+  fundamental_growth_weight: 0.25
+  quality_weight: 0.25
+  risk_penalty_weight: 0.15
+  coverage_penalty_weight: 0.10
+
+# Gates for filtering stocks into rankings
+gates:
+  # Aggressive list gates (looser)
+  min_coverage_aggressive: 0.50          # At least 50% of key features present
+  min_liquidity_value_1d_aggressive: 1000000  # ₦1M daily turnover
+  
+  # Guardrails list gates (stricter)
+  min_coverage_guardrails: 0.60          # At least 60% of key features present
+  min_liquidity_value_1d_guardrails: 10000000  # ₦10M daily turnover
+  max_debt_to_equity_guardrails: 2.0     # Max D/E ratio
+  require_positive_net_margin_guardrails: false  # Set true to require profitability
+
+# Ranking settings
+sector_min_size_for_sector_ranks: 5      # Min stocks in sector for sector-relative ranking
+winsor_percentiles: [1, 99]              # Percentiles for winsorizing outliers
+
+# Key features used for coverage score calculation
+# Stocks missing many of these will be penalized
+key_features:
+  - price
+  - volume_1d
+  - perf_3m
+  - perf_6m
+  - perf_1y
+  - perf_ytd
+  - revenue_growth_ttm
+  - eps_growth_ttm
+  - roe_ttm
+  - net_margin_ttm
+  - operating_margin_ttm
+  - fcf_margin_ttm
+  - debt_to_equity
+  - vol_1m

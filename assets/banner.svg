@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" fill="none" role="img" aria-label="NaijaAlphas — institutional-grade equity intelligence for the Nigerian Exchange">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0" stop-color="#00a862"/>
+      <stop offset="0.5" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#fcd34d"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#00a862" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#00a862" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowY" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fcd34d" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#fcd34d" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#0f2119" stroke-width="1"/>
+    </pattern>
+    <clipPath id="wordclip">
+      <text x="78" y="150" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="-3">NaijaAlphas</text>
+    </clipPath>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="scanmask"><rect width="1200" height="300" fill="url(#fade)"/></mask>
+  </defs>
+
+  <rect width="1200" height="300" fill="#060b09"/>
+  <rect width="1200" height="300" fill="url(#grid)" opacity="0.6"/>
+  <ellipse cx="120" cy="30" rx="520" ry="290" fill="url(#glowG)"/>
+  <ellipse cx="1060" cy="290" rx="480" ry="280" fill="url(#glowY)"/>
+
+  <!-- animated candlestick / ticker strip -->
+  <g opacity="0.5">
+    <g fill="#00a862">
+      <rect x="700" y="196" width="7" height="34" rx="2"><animate attributeName="height" values="34;58;34" dur="4.2s" repeatCount="indefinite"/><animate attributeName="y" values="196;172;196" dur="4.2s" repeatCount="indefinite"/></rect>
+      <rect x="724" y="176" width="7" height="54" rx="2"><animate attributeName="height" values="54;30;54" dur="3.6s" repeatCount="indefinite"/><animate attributeName="y" values="176;200;176" dur="3.6s" repeatCount="indefinite"/></rect>
+      <rect x="796" y="158" width="7" height="72" rx="2"><animate attributeName="height" values="72;96;72" dur="4.8s" repeatCount="indefinite"/><animate attributeName="y" values="158;134;158" dur="4.8s" repeatCount="indefinite"/></rect>
+      <rect x="844" y="140" width="7" height="90" rx="2"><animate attributeName="height" values="90;62;90" dur="4.4s" repeatCount="indefinite"/><animate attributeName="y" values="140;168;140" dur="4.4s" repeatCount="indefinite"/></rect>
+      <rect x="892" y="118" width="7" height="112" rx="2"><animate attributeName="height" values="112;140;112" dur="5.2s" repeatCount="indefinite"/><animate attributeName="y" values="118;90;118" dur="5.2s" repeatCount="indefinite"/></rect>
+    </g>
+    <g fill="#f87171">
+      <rect x="748" y="188" width="7" height="42" rx="2"><animate attributeName="height" values="42;66;42" dur="3.9s" repeatCount="indefinite"/><animate attributeName="y" values="188;164;188" dur="3.9s" repeatCount="indefinite"/></rect>
+      <rect x="772" y="206" width="7" height="24" rx="2"><animate attributeName="height" values="24;44;24" dur="4.6s" repeatCount="indefinite"/><animate attributeName="y" values="206;186;206" dur="4.6s" repeatCount="indefinite"/></rect>
+      <rect x="820" y="184" width="7" height="46" rx="2"><animate attributeName="height" values="46;26;46" dur="4.1s" repeatCount="indefinite"/><animate attributeName="y" values="184;204;184" dur="4.1s" repeatCount="indefinite"/></rect>
+      <rect x="868" y="166" width="7" height="64" rx="2"><animate attributeName="height" values="64;40;64" dur="3.7s" repeatCount="indefinite"/><animate attributeName="y" values="166;190;166" dur="3.7s" repeatCount="indefinite"/></rect>
+    </g>
+    <!-- rising trend line -->
+    <path d="M700 214 L748 200 L772 210 L796 186 L820 194 L844 172 L868 180 L892 150 L940 128" fill="none" stroke="#fcd34d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="420" stroke-dashoffset="420">
+      <animate attributeName="stroke-dashoffset" values="420;0" dur="2.6s" fill="freeze"/>
+    </path>
+    <circle cx="940" cy="128" r="5" fill="#fcd34d">
+      <animate attributeName="r" values="5;8;5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- scan line -->
+  <g mask="url(#scanmask)">
+    <rect x="0" y="0" width="1200" height="2" fill="#34d399">
+      <animate attributeName="y" values="24;276;24" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.45;0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- wordmark -->
+  <text x="78" y="150" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="-3" fill="url(#brand)">NaijaAlphas</text>
+  <g clip-path="url(#wordclip)">
+    <rect x="-320" y="62" width="200" height="140" fill="url(#shine)" transform="skewX(-20)">
+      <animate attributeName="x" values="-320;820" dur="3.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <text x="82" y="192" font-family="'JetBrains Mono','Courier New',monospace" font-size="18" letter-spacing="4" fill="#94a3b8">EQUITY INTELLIGENCE FOR THE NIGERIAN EXCHANGE</text>
+
+  <!-- chips -->
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="13" font-weight="600">
+    <g transform="translate(82,216)">
+      <rect width="132" height="29" rx="14" fill="#00a862" fill-opacity="0.1" stroke="#00a862" stroke-opacity="0.4"/>
+      <text x="66" y="19" text-anchor="middle" fill="#34d399">8 SIGNALS</text>
+    </g>
+    <g transform="translate(224,216)">
+      <rect width="150" height="29" rx="14" fill="#fcd34d" fill-opacity="0.09" stroke="#fcd34d" stroke-opacity="0.35"/>
+      <text x="75" y="19" text-anchor="middle" fill="#fcd34d">1 CONVICTION</text>
+    </g>
+    <g transform="translate(384,216)">
+      <rect width="126" height="29" rx="14" fill="#fcd34d" fill-opacity="0.09" stroke="#fcd34d" stroke-opacity="0.35"/>
+      <text x="63" y="19" text-anchor="middle" fill="#fcd34d">DAILY 06:00</text>
+    </g>
+  </g>
+
+  <!-- live indicator -->
+  <g transform="translate(1030,50)" font-family="'JetBrains Mono','Courier New',monospace">
+    <circle r="5" fill="#34d399"><animate attributeName="opacity" values="1;0.35;1" dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle r="5" fill="none" stroke="#34d399" stroke-width="1.5">
+      <animate attributeName="r" values="5;17" dur="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <text x="16" y="4" font-size="13" letter-spacing="2" fill="#34d399">NGX · LIVE</text>
+  </g>
+</svg>

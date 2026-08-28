@@ -1,0 +1,53 @@
+# ─── Secrets ───
+.env
+*.key
+*.pem
+credentials*
+secrets*
+
+# ─── Personal / financial data — NEVER COMMIT ───
+data/
+outputs/
+cache/
+portfolio/
+holdings.json
+*_profile/            # browser automation profiles (cookies, saved logins)
+.tv_profile/
+.assessworth_profile/
+*Login Data*
+*Cookies*
+*Web Data*
+
+# ─── Notebooks with personal positions ───
+notebooks/portfolio_tracker.*
+notebooks/sister_portfolio.*
+*.ipynb_checkpoints/
+
+# ─── Data artifacts ───
+*.parquet
+*.csv
+*.pdf
+!.env.example
+
+# ─── Logs ───
+*.log
+*.log.err
+logs/
+
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ─── OS / IDE ───
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+.planning/
