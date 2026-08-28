@@ -97,17 +97,24 @@ python daily_ingest.py --capital 1000000
 ## 🏗️ Architecture
 
 ```
+daily_ingest.py    the daily pipeline entry point
 decision_system/   the conviction engine — signals, confidence, macro regime,
                    conviction fusion, portfolio construction, calibration
-analysis/          13 research modules — fundamental, quality, growth, seasonality,
+analysis/          research modules — fundamental, quality, growth, seasonality,
                    sentiment, hidden gems, disclosures, backtest
 ingest/            data acquisition — TradingView, AssessWorth, NGX disclosures,
                    annual reports, Proshare, news, macro
 notify/            Telegram bot — LLM agent, server, formatter, registry
 notebooks/         analyst workbench — momentum, gems, quality, stop-loss
+tools/             scheduled-task + service installers, strategy runner
+docs/              methodology write-ups and codebase architecture
 core/ config/ utils/   models, settings, visualization
 tests/             pipeline, decision-system, and scoring test suite
 ```
+
+Screeners, backtests, and snapshot utilities ship at the repo root
+(`find_gems_v2.py`, `backtest_momentum.py`, `quality_growth_screen.py`,
+`create_snapshot.py`, and more).
 
 **Engineered to run unattended:** failure-isolated pipeline steps, a run manifest that records exactly which sources degraded, and a scheduled-task installer for daily execution.
 
