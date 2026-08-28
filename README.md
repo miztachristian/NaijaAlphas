@@ -130,9 +130,8 @@ python daily_ingest.py --capital 1000000
 
 ## ⚠️ Important
 
-**NaijaAlphas is research software, not financial advice.** It surfaces and scores information — it does not predict prices, and no conviction score is a guarantee of return. Nigerian equities carry real liquidity, currency, and disclosure risk. Every output is a starting point for your own analysis, and you are responsible for your own capital.
+**NaijaAlphas is research software, not financial advice.** It surfaces and scores information. Every output is a starting point for your own analysis, and you are responsible for your own capital.
 
-This public repository is the **engine and its methodology**. Portfolio data, credentials, and market-data caches are excluded by design.
 
 ## 📄 License
 
