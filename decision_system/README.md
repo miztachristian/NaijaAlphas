@@ -4,7 +4,7 @@ A unified NGX decision engine. It fuses every existing analysis signal plus a
 Nigeria macro regime into **one explainable 0–100 conviction score + action per
 stock**, constructs a concrete portfolio, and runs as an automated daily pipeline.
 
-It *orchestrates* the analyzers in `analysis/` — it never re-implements their
+It *orchestrates* the analyzers in `analysis/`. It never re-implements their
 scoring math.
 
 ## Daily use
@@ -31,18 +31,18 @@ header for the `schtasks` command).
 
 ## How the conviction score works
 
-1. Eight signals (`signals.py`) — fundamental, technical, quality, seasonality,
-   disclosure, report tone, news sentiment, market context — each normalized to
+1. Eight signals (`signals.py`): fundamental, technical, quality, seasonality,
+   disclosure, report tone, news sentiment, market context, each normalized to
    0–100, or **NaN when there is no data**.
 2. Weighted sum (`conviction.py`) with weights from `config.ConvictionWeights`,
-   **re-normalized over only the signals that have data** — a missing signal is
+   **re-normalized over only the signals that have data**. A missing signal is
    excluded, never zero-filled.
 3. A bounded macro regime tilt (`macro_regime.py`, ±`MACRO_TILT_CAP` points).
-4. Confidence shrinkage (`confidence.py`) — a thinly-covered stock is pulled
+4. Confidence shrinkage (`confidence.py`): a thinly-covered stock is pulled
    toward neutral (50) instead of being penalised.
 5. A holding-aware action: STRONG_BUY / ADD / HOLD / TRIM / SELL / AVOID.
 
-No ML — with ~30 historical snapshots a model would fit noise. The weighted
+No ML. With ~30 historical snapshots a model would fit noise. The weighted
 scheme is auditable and calibratable.
 
 ## Modules
@@ -70,7 +70,7 @@ python -m decision_system.calibration
 
 Measures each factor's Spearman correlation with forward returns across all
 stored snapshot pairs and writes `outputs/calibration/<date>_weight_report.md`.
-A human reviews it and edits `config.ConvictionWeights` — nothing auto-writes.
+A human reviews it and edits `config.ConvictionWeights`. Nothing auto-writes.
 
 ## Tuning
 
